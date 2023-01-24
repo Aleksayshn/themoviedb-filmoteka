@@ -8,6 +8,8 @@
     "build": "parcel build src/*.html --public-url /themoviedb-filmoteka/"
   },
   "dependencies": {
+    "axios": "^1.2.3",
+    "buffer": "^6.0.3",
     "modern-normalize": "^1.1.0"
   },
   "devDependencies": {

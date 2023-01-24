@@ -4,7 +4,7 @@
   "description": "",
   "homepage": "https://aleksayshn.github.io/themoviedb-filmoteka",
   "scripts": {
-    "start": "parcel src/*.html",
+    "start": "parcel src/index.html",
     "build": "parcel build src/*.html --public-url /themoviedb-filmoteka/"
   },
   "dependencies": {

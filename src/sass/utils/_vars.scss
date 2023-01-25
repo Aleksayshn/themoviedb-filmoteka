@@ -1,11 +1,9 @@
-:root {
-  --accent-color: #ff6b01;
-  --current-color: #ff001b;
-  --primary-text-color: #ffffff;
-  --secondary-text-color: #000000;
-  --add-text-color: #8c8c8c;
-  --footer-text-color: #545454;
-  --background-color: #f7f7f7;
-  --time: 250ms;
-  --function-animate: cubic-bezier(0.4, 0, 0.2, 1);
-}
+$cl-accent: #FF6B08; // акцент колір
+$cl-primary: #000000; // основний колір
+$cl-white-primary: #ffffff; // основний білий колір
+$cl-modal-text: #8C8C8C; // колір тексту в модальному вікні
+$cl-foot-text: #545454; // колір тексту футера
+$cl-foot-bg: #F7F7F7; // колір фону футера
+$cl-action: #FF001B; // колір підкресkення активної сторінки / помилки результату пошуку
+$cl-modal-overlay_bg-color: rgba(0, 0, 0, 0.8); // колір бекдропу модалок
+$cl-transition-animation: cubic-bezier(0.4, 0, 0.2, 1);

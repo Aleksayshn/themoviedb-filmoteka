@@ -1,12 +1,13 @@
-@import './utils/common';
-@import './utils/reset';
 @import './utils/vars';
 @import './utils/mixins';
+@import './utils/util-classes';
 @import './utils/breakpoints';
+
+@import './utils/common';
+@import './utils/reset';
 @import './utils/body';
 @import './utils/container';
-@import './utils/util-classes';
 
-
-@import './components/header-main';
-@import './components/spinner';
+@import './components/header';
+// @import './components/spinner';
+@import './components/login-modal';

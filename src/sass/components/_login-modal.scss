@@ -1,0 +1,163 @@
+// Sign In Modal
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: $cl-modal-overlay_bg-color;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 250ms $cl-transition-animation;
+
+  &.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+
+  }
+
+  &.is-hidden .modal-container {
+    transform: translate(-10%, -90%) scale(0.8);
+  }
+}
+
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 280px;
+  padding: 40px 12px;
+  border-radius: 5px;
+  background-color: $cl-white-primary;
+  z-index: 3;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms $cl-transition-animation, visibility 250ms $cl-transition-animation;
+  box-shadow: $cl-modal-text 0px 3px 8px;
+
+  @include tab {
+    max-width: 600px;
+  }
+}
+
+.modal-img {
+  width: 40%;
+  margin-bottom: 20px;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 85%;
+
+  &.is-hidden {
+    display: none;
+  }
+}
+
+.modal-input {
+  padding: 10px 30px;
+  margin-bottom: 20px;
+  border: 1px solid $cl-modal-text;
+  border-radius: 5px;
+  width: 100%;
+  outline: none;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $cl-accent;
+  }
+
+}
+
+.modal-btn {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  min-width: 110px;
+  min-height: 44px;
+  text-transform: uppercase;
+  text-align: center;
+  border: 1px solid $cl-primary;
+  border-radius: 5px;
+  transition: 250ms $cl-transition-animation;
+
+  &:hover,
+  &:focus {
+    background: $cl-accent;
+    border-color: $cl-accent;
+    color: $cl-white-primary;
+  }
+
+  @include tab {
+    min-width: 125px;
+  }
+
+  @include desk {
+    min-width: 136px;
+  }
+
+  &[data-action="toggle"] {
+    border: none;
+    text-decoration: underline;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      border-color: $cl-accent;
+      color: $cl-accent;
+      text-shadow: rgb(255, 107, 8, 0.4) 0px 3px 8px;
+    }
+  }
+}
+
+.modal-text {
+  font: inherit;
+  color: $cl-accent;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.close-modal {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  width: 14px;
+  height: 14px;
+  opacity: 0.7;
+  background-color: $cl-white-primary;
+  border: none;
+  cursor: pointer;
+  transition: 250ms ease-in;
+
+  &:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    left: 6px;
+    top: -2px;
+    content: ' ';
+    height: 19px;
+    width: 2px;
+    background-color: $cl-primary;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}

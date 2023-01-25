@@ -1,0 +1,44 @@
+<header class="header homeimg">
+  <!-- .libimg клас який потрібно додавати до хедера при натисканні на кнопку lib,
+  а .homeimg відповідно забирати-->
+  <div class="container">
+    <div class="wrapper">
+      <a href="#" class="logo-link">
+        <svg class="animation-rotate" width="24" height="24">
+          <use href="./images/sprite.svg#icon-logo"></use>
+        </svg>
+        <span class="logo-text animation-logo">Filmoteka</span></a>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <button class="nav-btn home__btn current-page" type="button">
+              Home
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-btn library__btn" type="button">
+              My library
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-btn login__btn" type="button">
+              Login
+            </button>
+          </li>
+          <li class="nav-item is-hidden">
+            <button class="nav-btn logout__btn" type="button">Logout</button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <form class="search-form">
+      <input data-lang="placeholder" class="input-form" type="text" placeholder="Movie search" />
+      <button class="search-btn" type="submit">
+        <svg class="menu__icon" width="12" height="12">
+          <use href="./images/sprite.svg#icon-search"></use>
+        </svg>
+      </button>
+    </form>
+  </div>
+</header>

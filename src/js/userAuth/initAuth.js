@@ -19,7 +19,6 @@ function authStateObserver(user) {
 
         // Set the user's profile pic.
         userPicElement.style.backgroundImage = 'url(' + addSizeToGoogleProfilePic(profilePicUrl) + ')';
-        userPicElement.textContent = userName[0];
         userPicElement.classList.remove('is-hidden');
 
         // Hide sign-in button.
@@ -32,6 +31,7 @@ function authStateObserver(user) {
         refs.btnLogoutEl.classList.add('is-hidden');
 
         // Show sign-in button.
+        userPicElement.classList.add('is-hidden');
         refs.btnLoginOpenEl.classList.remove('is-hidden');
     }
 }
@@ -42,7 +42,7 @@ function getProfilePicUrl() {
 
 // Returns the signed-in user's display name.
 function getUserName() {
-    return getAuth().currentUser.displayName;
+    return getAuth().currentUser.userName;
 }
 
 // Adds a size to Google Profile pics URLs.

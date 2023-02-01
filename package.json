@@ -12,7 +12,8 @@
     "buffer": "^6.0.3",
     "firebase": "^9.16.0",
     "firebase-tools": "^11.21.0",
-    "modern-normalize": "^1.1.0"
+    "modern-normalize": "^1.1.0",
+    "notiflix": "^3.2.6"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",

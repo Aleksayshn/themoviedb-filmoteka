@@ -16,9 +16,10 @@ function authStateObserver(user) {
         // Get the signed-in user's profile pic and name.
         const profilePicUrl = getProfilePicUrl();
         const userName = getUserName();
-
-        // Set the user's profile pic.
-        userPicElement.style.backgroundImage = 'url(' + addSizeToGoogleProfilePic(profilePicUrl) + ')';
+        if (profilePicUrl) {
+            // Set the user's profile pic.
+            userPicElement.style.backgroundImage = 'url(' + addSizeToGoogleProfilePic(profilePicUrl) + ')';
+        }
         userPicElement.classList.remove('is-hidden');
 
         // Hide sign-in button.
@@ -37,7 +38,7 @@ function authStateObserver(user) {
 }
 
 function getProfilePicUrl() {
-    return getAuth().currentUser.photoURL || '/src/images/mob/login-avatar-320.png';
+    return getAuth().currentUser.photoURL;
 }
 
 // Returns the signed-in user's display name.

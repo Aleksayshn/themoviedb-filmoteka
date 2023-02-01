@@ -4,10 +4,7 @@ import { closeLoginModal } from "../userAuth/login-modal";
 
 refs.btnGoogleEl.addEventListener('click', signIn);
 
-
 async function signIn(e) {
-    e.preventDefault();
-
     // Sign in Firebase using popup auth and Google as the identity provider.
     const provider = new GoogleAuthProvider();
     const auth = getAuth();

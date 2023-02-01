@@ -13,6 +13,8 @@ export const refs = {
     btnGoogleEl: document.querySelector('.google-btn'),
     btnLoginEl: document.querySelector('.login-btn'),
     registerFormEl: document.querySelector('.modal-form.register'),
+    // registerGoogleEl: document.querySelector('.modal-form.register'),
+
     modalBtnEls: document.querySelectorAll(
         '.modal-form button[data-action="toggle"]'
     ),

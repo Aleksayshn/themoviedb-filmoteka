@@ -7,8 +7,6 @@ refs.modalBtnEls[1].addEventListener('click', switchModals);
 refs.btnLoginOpenEl.addEventListener('click', openLoginModal);
 refs.btnCloseAutEl.addEventListener('click', closeLoginModal);
 refs.loginBackdropEl.addEventListener('click', onBackdropClick);
-refs.loginBackdropEl.addEventListener('click', onBackdropClick);
-
 
 function switchModals() {
     refs.loginFormEl.classList.toggle('is-hidden');
@@ -16,7 +14,7 @@ function switchModals() {
 };
 
 function openLoginModal() {
-    console.log('openLoginModal');
+    console.log(refs.loginFormEl);
     scroll.disableScroll();
     refs.loginBackdropEl.classList.toggle('is-hidden');
     window.addEventListener('keydown', onEscPress);

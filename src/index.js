@@ -13,7 +13,9 @@ import './js/userAuth/firebase-init';
 import './js/userAuth/initAuth';
 import './js/userAuth/signInGoogle';
 import './js/userAuth/signOutUser';
+import './js/userAuth/logInUser';
 import './js/userAuth/registerUser';
+
 
 
 

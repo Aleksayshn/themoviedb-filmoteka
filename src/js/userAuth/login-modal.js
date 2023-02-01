@@ -22,7 +22,7 @@ function openLoginModal() {
     window.addEventListener('keydown', onEscPress);
 };
 
-function closeLoginModal() {
+export function closeLoginModal() {
     scroll.enableScroll();
     refs.loginBackdropEl.classList.toggle('is-hidden');
     window.removeEventListener('keydown', onEscPress);

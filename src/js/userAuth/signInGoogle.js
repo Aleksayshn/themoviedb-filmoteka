@@ -1,5 +1,6 @@
 import { refs } from '../refs';
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { closeLoginModal } from "../userAuth/login-modal";
 
 refs.btnGoogleEl.addEventListener('click', signIn);
 
@@ -11,8 +12,6 @@ async function signIn(e) {
     const provider = new GoogleAuthProvider();
     const auth = getAuth();
 
-    // refs.btnLogoutEl.classList.toggle('is-hidden');
-    // refs.btnLoginOpenEl.classList.toggle('is-hidden');
     try {
         const result = await signInWithPopup(auth, provider);
         // This gives you a Google Access Token. You can use it to access the Google API.
@@ -20,7 +19,7 @@ async function signIn(e) {
         const token = credential.accessToken;
         const user = result.user;
         console.log(result);
-
+        closeLoginModal()
     } catch (error) {
         const errorCode = error.code;
         const errorMessage = error.message;

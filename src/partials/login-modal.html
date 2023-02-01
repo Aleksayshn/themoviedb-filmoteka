@@ -7,38 +7,44 @@
     <div class="modal-container">
         <button class="close-modal" data-action="close"></button>
         <div class="modal-img">
-            <img srcset="./images/mob/login-avatar-320.png 320w, ./images/tab/login-avatar-768.png 768w,
-        ./images/desc/login-avatar-1280.png 1280w" src="./images/mob/login-avatar-320.png" alt="Avatar" sizes="40 vw"
-                class="modal-avatar">
+            <img class="modal-avatar" srcset="./images/mob/login-avatar-320.png 320w, ./images/tab/login-avatar-768.png 768w,
+        ./images/desc/login-avatar-1280.png 1280w" src="./images/mob/login-avatar-320.png" alt="Avatar" sizes="40 vw">
         </div>
 
 
         <!-- Login -->
-        <form class="modal-form login">
-            <!-- <label for="login-email"><b>Username</b></label> -->
-            <input type="email" placeholder="Email" name="email" class="modal-input" data-lang='emailPlaceholder'>
-            <!-- <label for="login-password"><b>Password</b></label> -->
-            <input type="password" placeholder="Password" name="password" class="modal-input"
-                data-lang='passwordPlaceholder'>
-            <button type="submit" class="modal-btn" data-lang='loginBtn'>Login</button>
+        <form action="javascript:void(0);" method="post" class="modal-form login">
+            <input required type="email" placeholder="Email" name="email" class="modal-input required">
+            <input required type="password" placeholder="Password" name="password" class="modal-input">
+            <div class="wrapper-btn">
+                <button type="submit" class="modal-btn login-btn">Login</button>
+                <button type="submit" class="modal-btn google-btn">
+                    Sign in with Google
+                </button>
+            </div>
 
-            <p class="modal-text" data-lang='noAccount'>Don't have an account?</p>
-            <button type="button" class="modal-btn" data-action="toggle" data-lang='registerBtn'>Register</button>
+            <p class="modal-text">Don't have an account?</p>
+            <button type="button" class="modal-btn" data-action="toggle">Register</button>
 
         </form>
 
         <!-- Registration -->
-        <form class="modal-form register is-hidden">
+        <form class="modal-form register is-hidden" action="javascript:void(0);" method="post">
 
-            <input type="email" placeholder="Email" name="email" class="modal-input" data-lang='emailPlaceholder'>
-            <input type="password" placeholder="Password" name="password" class="modal-input"
-                data-lang='passwordPlaceholder'>
-            <input type="password" placeholder="Repeat Password" name="repeat" class="modal-input"
-                data-lang='repeatPlaceholder'>
-            <button type="submit" class="modal-btn" data-lang='registerBtn'>Register</button>
+            <input required type="email" placeholder="Email" name="email" class="modal-input">
+            <input required type="password" placeholder="Password" name="password" class="modal-input">
+            <input required type="password" placeholder="Repeat Password" name="repeat" class="modal-input">
 
-            <p class="modal-text" data-lang='account'>Have an account?</p>
-            <button type="button" class="modal-btn" data-action="toggle" data-lang='loginBtn'>Login</button>
+            <div class="wrapper-btn">
+                <button type="submit" class="modal-btn register-btn">Register</button>
+                <button type="submit" class="modal-btn google-btn">
+                    Register with Google
+                </button>
+            </div>
+
+
+            <p class="modal-text">Have an account?</p>
+            <button type="button" class="modal-btn" data-action="toggle">Login</button>
 
         </form>
 

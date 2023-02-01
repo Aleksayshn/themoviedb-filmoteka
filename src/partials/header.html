@@ -11,23 +11,27 @@
       <nav class="nav">
         <ul class="nav-list">
           <li class="nav-item">
-            <button class="nav-btn home__btn current-page" type="button">
+            <button class="nav-btn nav-item__home current-page" type="button">
               Home
             </button>
           </li>
           <li class="nav-item">
-            <button class="nav-btn library__btn" type="button">
+            <button class="nav-btn nav-item__library" type="button">
               My library
             </button>
           </li>
           <li class="nav-item">
-            <button class="nav-btn login__btn" type="button">
+            <button class="nav-btn nav-item__login" type="button">
               Login
             </button>
           </li>
-          <li class="nav-item is-hidden">
-            <button class="nav-btn logout__btn" type="button">Logout</button>
+          <li class="nav-item ">
+            <button id="user" class="nav-btn nav-item__user is-hidden" type="button"></button>
           </li>
+          <li class="nav-item ">
+            <button class="nav-btn nav-item__logout is-hidden" type="submit">Logout</button>
+          </li>
+
         </ul>
       </nav>
     </div>

@@ -1,15 +1,17 @@
 export const refs = {
-    btnHomePageEl: document.querySelector('.home__btn'),
-    btnLibPageEl: document.querySelector('.library__btn'),
+    btnHomePageEl: document.querySelector('.nav-item__home'),
+    btnLibPageEl: document.querySelector('.nav-item__library'),
     btnSearchEl: document.querySelector('.search-form'),
-    // Login Modal
-    btnLoginOpenEl: document.querySelector('.login__btn'),
-    btnOutEl: document.querySelector('.logout__btn'),
+
+    btnLoginOpenEl: document.querySelector('.nav-item__login'),
+    btnLogoutEl: document.querySelector('.nav-item__logout'),
     btnCloseAutEl: document.querySelector('button[data-action="close"]'),
+
+    // Login Modal
     loginBackdropEl: document.querySelector('.modal-backdrop'),
-    loginModalEl: document.querySelector('.modal-container'),
-    logoutBtnEl: document.querySelector('.nav-btn.logout__btn'),
     loginFormEl: document.querySelector('.modal-form.login'),
+    btnGoogleEl: document.querySelector('.google-btn'),
+    btnLoginEl: document.querySelector('.login-btn'),
     registerFormEl: document.querySelector('.modal-form.register'),
     modalBtnEls: document.querySelectorAll(
         '.modal-form button[data-action="toggle"]'

@@ -8,4 +8,14 @@ window.onload = function () {
 import './js/refs';
 import './js/userAuth/login-modal';
 import './js/stop-scrolling';
+import './js/userAuth/firebase-config';
+import './js/userAuth/firebase-init';
+import './js/userAuth/initAuth';
+import './js/userAuth/signInGoogle';
+import './js/userAuth/signOutUser';
+
+
+
+
+
 

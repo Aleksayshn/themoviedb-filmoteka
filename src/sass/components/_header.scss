@@ -103,8 +103,9 @@
 
 .nav-list {
   display: flex;
-  width: 180px;
   justify-content: space-between;
+  align-items: center;
+  gap: 15px;
 }
 
 .current-page {

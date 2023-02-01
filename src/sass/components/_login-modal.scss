@@ -51,9 +51,10 @@
 }
 
 .modal-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  text-align: center;
   width: 85%;
 
   &.is-hidden {
@@ -78,15 +79,12 @@
 }
 
 .modal-btn {
-  padding: 0;
-  margin: 0;
-  display: inline-block;
-  min-width: 110px;
-  min-height: 44px;
+  width: 5rem;
+  height: 2rem;
   text-transform: uppercase;
-  text-align: center;
   border: 1px solid $cl-primary;
   border-radius: 5px;
+  font-size: 0.5rem;
   transition: 250ms $cl-transition-animation;
 
   &:hover,
@@ -96,13 +94,7 @@
     color: $cl-white-primary;
   }
 
-  @include tab {
-    min-width: 125px;
-  }
 
-  @include desk {
-    min-width: 136px;
-  }
 
   &[data-action="toggle"] {
     border: none;
@@ -160,4 +152,32 @@
   &::after {
     transform: rotate(-45deg);
   }
+}
+
+.google-btn {
+  background-color: #4285f4;
+}
+
+.google-btn:hover {
+  background-color: #357ae8;
+}
+
+.wrapper-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.is-hidden {
+  display: none;
+}
+
+#user {
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: $cl-accent;
+  background-size: cover;
 }

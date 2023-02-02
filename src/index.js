@@ -6,6 +6,16 @@ window.onload = function () {
     }, 500);
 }
 import './js/refs';
+import './js/movie-api';
+
+import './js/markUp/trendFilms';
+import './js/renderTrendingPage';
+
+
+
+
+
+
 import './js/userAuth/login-modal';
 import './js/stop-scrolling';
 import './js/userAuth/firebase-config';
@@ -15,6 +25,7 @@ import './js/userAuth/signInGoogle';
 import './js/userAuth/signOutUser';
 import './js/userAuth/logInUser';
 import './js/userAuth/registerUser';
+
 
 
 

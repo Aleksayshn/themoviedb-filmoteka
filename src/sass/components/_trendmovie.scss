@@ -1,0 +1,106 @@
+.trending-films__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    row-gap: 20px;
+    column-gap: 20px;
+
+    @include tab {
+        flex-direction: unset;
+        row-gap: 16px;
+        column-gap: 32px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @include desk {
+        column-gap: 16px;
+    }
+
+}
+
+.trending-films__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding-bottom: 16px;
+    transition: 250ms $cl-transition-animation;
+
+    &:hover {
+        border-radius: 5px;
+        transform: scale(1.02);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    @include tab {
+        flex-basis: calc((100% - 32px) / 2);
+    }
+
+    @include desk {
+        flex-basis: calc((100% - 32px) / 3);
+    }
+}
+
+.trending-films__img-card {
+    border-radius: 5px;
+    margin-bottom: 8px;
+    overflow: hidden;
+
+    @include tab {
+        width: 336px;
+        height: 455px;
+    }
+
+    @include desk {
+        width: 394px;
+        height: 574px;
+    }
+}
+
+.trending-films__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.trending-films__title {
+    font-size: 12px;
+    color: $cl-primary;
+    line-height: 1.33;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+
+    @include desk {
+        font-size: 20px;
+        line-height: 1.2;
+    }
+}
+
+.trending-films__info {
+    display: flex;
+    color: $cl-accent;
+    font-size: 12px;
+    line-height: calc(16 / 12);
+}
+
+.trending-films__year {
+    margin-left: 2px;
+}
+
+.trending-films__line {
+    margin-left: 2px;
+}
+
+.trending-films__vote {
+    padding: 1px 9px 1px 9px;
+    margin-left: 9px;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    background-color: $cl-accent;
+    color: $cl-white-primary;
+    border-radius: 5px;
+}

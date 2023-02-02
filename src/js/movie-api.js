@@ -2,7 +2,7 @@
 
 import axios from 'axios';
 
-export default class TheMovieAPI {
+class TheMovieAPI {
   static BASE_URL = 'https://api.themoviedb.org/3/';
   static API_KEY = 'cf0ab519f45eea0dacef149b4aa4a796';
   static TRENDING_URL = 'trending/movie/week';
@@ -148,3 +148,6 @@ export default class TheMovieAPI {
     this.searchQuery = newQuery;
   }
 }
+
+
+export const themoviedb = new TheMovieAPI();

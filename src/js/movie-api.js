@@ -45,7 +45,7 @@ class TheMovieAPI {
           page: this.page,
           include_adult: false,
           query: this.searchQuery,
-          language: 'en - US'
+          // language: 'en - US'
         },
       };
       const response = await axios.get(
@@ -54,6 +54,7 @@ class TheMovieAPI {
       );
       this.incrementPage();
       return response.data;
+
     } catch (error) {
       console.error(error);
     }
@@ -150,4 +151,4 @@ class TheMovieAPI {
 }
 
 
-export const themoviedb = new TheMovieAPI();
+export const theMovieAPI = new TheMovieAPI();

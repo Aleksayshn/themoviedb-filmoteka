@@ -1,6 +1,6 @@
 'use strict'
 
-export function createMarkUpGallery(cardsMovie) {
+export function createMarkUpGallery(cardsMovie, genres) {
   const baseImageUrl = 'https://image.tmdb.org/t/p/w500';
 
   return cardsMovie
@@ -9,10 +9,22 @@ export function createMarkUpGallery(cardsMovie) {
         poster_path,
         title,
         vote_average,
-        release_date
+        release_date,
+        genre_ids
       }) => {
-        const year = release_date.substring(0, 4);
+
+        const year = !release_date ? 'Date not found' : release_date.slice(0, 4);
         const fullImageUrl = `${baseImageUrl}${poster_path}`;
+
+        const namesGenres = [];
+        genre_ids.forEach((genreId, index) => {
+          if (index < 2) {
+            const b = genres.find(({ id }) => id == genreId);
+            namesGenres.push(b.name);
+          } else if (index == 3) {
+            namesGenres.push("Others");
+          }
+        });
 
         return `
             <li class="trending-films__item">
@@ -22,9 +34,9 @@ export function createMarkUpGallery(cardsMovie) {
                 </div>
                 <p class="trending-films__title">Title: ${title}</p>
                 <div class="trending-films__info">
-                  <span class="trending-films__line"> | </span>
-                  <p class="trending-films__year">${year}</p>
-                  <p class="trending-films__vote">${vote_average}</p>
+                  <p class="trending-films__genres"> ${namesGenres.join(', ')} </p>
+                  <p class="trending-films__year">| ${year}</p>
+                  <p class="trending-films__vote">${vote_average.toFixed(1)}</p>
                  </div>
             </li>
       `
